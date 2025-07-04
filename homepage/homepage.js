@@ -1,24 +1,36 @@
-const banner = document.getElementById("bannercontainer");4
-
+const banner = document.getElementById("bannercontainer");
 
 let scrollAmount = 0;
-let scrollStep = 1085;
-let maxScroll = banner.scrollWidth - banner.clientWidth;
-let direction = 1; 
+let direction = 1;
 let timerDelay = 3000;
-let autoScrollTimer = setInterval(autoScroll, timerDelay);
-const prof_tab = document.getElementById("profilebar")
-const maincontents = document.getElementById("contents")
+let scrollStep;
+
+window.addEventListener("load", () => {
+    const firstCard = banner.querySelector(".off1");
+    const cardStyles = window.getComputedStyle(firstCard);
+    const cardWidth = firstCard.offsetWidth;
+    const gap = parseInt(getComputedStyle(banner).columnGap) || 0;
+
+    scrollStep = cardWidth + gap;
+
+    maxScroll = banner.scrollWidth - banner.clientWidth;
+
+    autoScrollTimer = setInterval(autoScroll, timerDelay);
+});
+
+let autoScrollTimer;
 
 function autoScroll() {
-    scrollAmount += scrollStep * direction;
+    scrollAmount = banner.scrollLeft + scrollStep * direction;
+
+    const maxScroll = banner.scrollWidth - banner.clientWidth;
 
     if (scrollAmount >= maxScroll) {
         scrollAmount = maxScroll;
-        direction = -1; 
+        direction = -1;
     } else if (scrollAmount <= 0) {
         scrollAmount = 0;
-        direction = 1; 
+        direction = 1;
     }
 
     banner.scrollTo({
@@ -27,6 +39,10 @@ function autoScroll() {
     });
 }
 
+banner.addEventListener("scroll", () => {
+    scrollAmount = banner.scrollLeft;
+});
+
 function resetAutoScrollTimer() {
     clearInterval(autoScrollTimer);
     autoScrollTimer = setTimeout(() => {
@@ -34,28 +50,14 @@ function resetAutoScrollTimer() {
     }, 5000); 
 }
 
-// Left scroll on click
 function leftroll() {
     banner.scrollBy({ left: -scrollStep, behavior: "smooth" });
-    scrollAmount = banner.scrollLeft; 
+    scrollAmount = banner.scrollLeft;
     resetAutoScrollTimer();
 }
 
-// Right scroll on click
 function rightroll() {
     banner.scrollBy({ left: scrollStep, behavior: "smooth" });
-    scrollAmount = banner.scrollLeft; 
+    scrollAmount = banner.scrollLeft;
     resetAutoScrollTimer();
-}
-
-function profilebar(){
-    prof_tab.style.display = "flex";
-    maincontents.classList.add("blurred")
-    document.body.classList.add("noscroll")
-}
-
-function closeProfilebar() {
-    prof_tab.style.display = "none";                
-    maincontents.classList.remove("blurred");        
-    document.body.classList.remove("noscroll");    
 }
