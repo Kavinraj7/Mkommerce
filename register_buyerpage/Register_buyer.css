@@ -1,0 +1,104 @@
+body{
+    background: radial-gradient(blue,violet );
+    background-size: cover;
+     overflow: hidden;
+}
+#top{
+    display: flex;
+    /* justify-content: top; */
+    margin-left: 290px;
+    margin-top: -5px;
+    border: 2px solid white;
+    width: fit-content;
+    width: 200px;
+    padding: 10px;
+    border-top: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3); /* Transparent background */
+}
+#top img{
+    height: 80px;
+    width: 80px;
+}
+#top h2{
+    text-align: center;
+    font-size: xx-large;
+} 
+fieldset #f1{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 180px; 
+    padding: 0;
+}
+
+#f1 label{
+    font-size: x-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    margin-top: 10px;
+    color : rgb(0, 0, 0);
+}
+
+#f1 input{
+    width: 300px;
+    height: 25px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.3); /* Transparent background */
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+    margin-top: 3px;
+    
+} 
+
+form{
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 800px;
+}
+.forms{
+    padding-left: 10px;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+}
+
+fieldset #submit{
+    margin-top: 60px;
+    border: 2px solid rgb(9, 7, 7);
+    border-radius: 10px;
+    color: white;
+    font-size: large;
+    font-weight: 700;
+    width: 200px;
+    height: 50px;
+    margin-left: 50px;
+    background: rgba(255, 255, 255, 0.3); /* Transparent background */
+}
+fieldset #verify{
+    margin-top: 0;
+    width: 100px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.3); /* Transparent background */
+    border: 2px solid rgb(9, 7, 7);
+    border-radius: 10px;
+    color: white;
+    font-size: medium;
+    font-weight: 600;
+}
+fieldset{
+    background: rgba(255, 255, 255, 0.3); /* Transparent background */
+    border: 2px solid black;
+    border-radius: 10px;
+    border-inline: 2px solid black
+    ;
+}
+
