@@ -61,3 +61,18 @@ function rightroll() {
     scrollAmount = banner.scrollLeft;
     resetAutoScrollTimer();
 }
+//--------------------------------------------------------------------------
+const maincontents = document.getElementById("contents")
+const profilebox = document.getElementById("profilebar")
+
+function profilebar(){
+    profilebox.style.display = "flex"
+    maincontents.classList.add("blurred")
+    document.body.classList.add("noscroll")
+}
+
+function closeProfilebar(){
+    profilebox.style.display = "none"
+    maincontents.classList.remove("blurred")
+    document.body.classList.remove("noscroll")
+}
