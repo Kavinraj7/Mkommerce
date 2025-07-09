@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MK Homepage</title>
+    <link rel="shortcut icon" href="./favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="seller.css">
+</head>
+<body>
+    <div id="contents">
+        <header>
+            <div id="head">
+                <nav>
+                    <img id="logo" src="./images/logo.png" alt="">
+                    <div id="anchor">
+                        <a href="/Mkommerce/homepage/homepage.html">Home</a>
+                        <a href="">Products</a>
+                        <a href="">Sellers</a>
+                        <a href="">Cart</a>
+                    </div>
+                    <img id="prof" src="./images/account_circle_500dp_000000_FILL0_wght400_GRAD0_opsz48.png"  onclick="profilebar(event)">
+                </nav>
+            </div>
+        </header>
+        <div id="main_c">
+            <div id="subtags">
+                <div id="left_section">
+                    <h3><img src="./images/consumer.png" id="consumer">100000+ <br> Regular Customers</h3>
+                    <h3><img src="./images/seller.png" id="seller">500000+ <br> Happy Sellers</h3>
+                </div>
+                <div id="divider"></div>
+                <div id="right_section">
+                    <h1 id="hi"><span>Welcome</span> Back!</h1>
+                </div>
+            </div>
+            <div id="collector">
+                <img src="./images/registerseller.png" id="cover">
+                <form>
+                    <fieldset>
+                        <h1>LOGIN</h1>
+                        <div id="quotes"><span></span><h2></h2></div> 
+                        <div id="details">
+                            <input type="text" placeholder="SellerID">
+                            <input type="text" placeholder="Password">
+                            <button id="submit">Submit</button>
+                            <h4><a href="">Forgot Password?</a></h4>
+                            <div id="register">
+                                <h4>New To the Market?</h4> 
+                                <a href=""><h3><b>Register & Grow</b></h3></a>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <div class="foott">
+                <div class="top_foot">
+                    <div class="about">
+                        <h3>ABOUT</h3>
+                        <h4>Contact Us</h4>
+                        <h4>About Us</h4>
+                        <h4>Careers</h4>
+                        <h4>Flipkart Stories</h4>
+                        <h4>Press</h4>
+                        <h4>Corprate Information</h4>
+                    </div>
+                    <div class="help">
+                        <h3>HELP</h3>
+                        <h4>Payments</h4>
+                        <h4>Shipping</h4>
+                        <h4>Cancellation & Returns</h4>
+                        <h4>FAQ</h4>
+                    </div>
+                    <div class="contact">
+                        <h3>Mail Us</h3>
+                        <div>
+                            <h5>MKommerce Private Limited</h5>
+                            <h5>Semur, Kulam</h5>
+                            <h5>Erode</h5>
+                            <h3>Social</h3>
+                            <div class="imgs">    
+                                <a href=""><img class="sm" src="./images/whatsapp.png" alt=""></a>
+                                <a href=""><img class="sm" src="./images/twitter.png" alt=""></a>
+                                <a href=""><img class="sm" src="./images/youtube.png" alt=""></a>
+                                <a href=""><img class="sm" src="./images/instagram.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_foot">
+                    <a href="./seller.html">Seller Portal</a>
+                    <a href="">Advertise</a>
+                    <a href="">Help center</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="profiledrop" id="profilebar" style="display: none;">
+        <img id="back" src="./images/back_p.png" onclick="closeProfilebar()">
+        <div id="optionsprof">
+            <h3><img src="./images/profile_p.png" alt=""><span>My profile</span></h3>
+            <h3><img src="./images/orders_p.png" alt=""><span>Orders</span></h3>
+            <h3><img src="./images/whishlist_p.png" alt=""><span>Whishlist</span></h3>
+            <h3><img src="./images/coupon_p.png" alt=""><span>Coupons</span></h3>
+            <h3><img src="./images/notification_p.png" alt=""><span>Notifications</span></h3>
+            <h3><img src="./images/logout_p.png" alt=""><span>Logout</span></h3>
+        </div>
+        <div id="helps">
+            <h3>Help & Support</h3>
+            <h4>Contact Us</h4>
+            <h4>Help Chat</h4>
+        </div>
+    </div>
+    <script src="seller.js"></script>
+</body>
+</html>
