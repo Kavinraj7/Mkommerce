@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/", "destination": "/index.html" },
-    { "source": "/homepage", "destination": "/homepage/homepage.html" },
-    { "source": "/seller_pages", "destination": "/seller_pages/seller.html" },
-    { "source": "/seller_pages/seller", "destination": "/seller_pages/seller.html" }
-  ]
-}
